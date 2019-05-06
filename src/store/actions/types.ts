@@ -1,3 +1,7 @@
-export const FETCH_PERSON = 'FETCH_PERSON';
-export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-export const FETCH_ERROR = 'FETCH_ERROR';
+import { createActionsWithPrefix } from '../../utils/action';
+
+export const PersonActions = createActionsWithPrefix('PERSON/', {
+  FETCH_PERSON: 'FETCH_PERSON',
+  FETCH_SUCCESS: 'FETCH_SUCCESS',
+  FETCH_ERROR: 'FETCH_ERROR',
+});

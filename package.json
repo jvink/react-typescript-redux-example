@@ -2,7 +2,8 @@
   "name": "react-typescript-redux-example",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
+    "@types/ramda": "^0.26.8",
     "@types/history": "^4.7.2",
     "@types/jest": "24.0.12",
     "@types/node": "11.13.8",
@@ -11,6 +12,10 @@
     "@types/react-redux": "^7.0.8",
     "@types/react-router": "^4.4.5",
     "@types/react-router-dom": "^4.3.2",
+    "prettier": "^1.17.0",
+    "typescript": "3.4.5"
+  },
+  "dependencies": {
     "connected-react-router": "^6.4.0",
     "history": "^4.9.0",
     "ramda": "^0.26.1",
@@ -23,8 +28,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.0.2",
-    "typesafe-actions": "^4.2.0",
-    "typescript": "3.4.5"
+    "typesafe-actions": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,19 +39,10 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/ramda": "^0.26.8"
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
