@@ -1,8 +1,7 @@
 import { createActionsWithPrefix } from '../../utils/action';
 
-export const AgencyActions = createActionsWithPrefix('AGENCY/', {
-  FETCH: 'FETCH',
+export const PersonActions = createActionsWithPrefix('PERSON/', {
+  FETCH_PERSON: 'FETCH_PERSON',
   FETCH_SUCCESS: 'FETCH_SUCCESS',
   FETCH_ERROR: 'FETCH_ERROR',
-  TEST: 'test',
 });

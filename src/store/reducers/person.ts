@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { AgencyActions } from '../actions/types';
+import { PersonActions } from '../actions/types';
 
 export interface PersonState {
   persons: Person[];
@@ -18,18 +18,18 @@ const reducer: Reducer<PersonState> = (
   { type, payload }
 ) => {
   switch (type) {
-    case AgencyActions.FETCH:
+    case PersonActions.FETCH_PERSON:
       return {
         ...state,
         isLoading: true,
       };
-    case AgencyActions.FETCH_SUCCESS:
+    case PersonActions.FETCH_SUCCESS:
       return {
         ...state,
         isLoading: false,
         persons: payload,
       };
-    case AgencyActions.FETCH_ERROR:
+    case PersonActions.FETCH_ERROR:
       return {
         ...state,
         isLoading: false,

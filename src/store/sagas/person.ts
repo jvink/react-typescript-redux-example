@@ -1,5 +1,5 @@
 import { all, call, fork, put, takeEvery } from 'redux-saga/effects';
-import { AgencyActions } from '../actions/types';
+import { PersonActions } from '../actions/types';
 import { fetchPersonSuccess, fetchPersonError } from '../actions/person';
 
 const URL = 'https://randomuser.me/api/?results=20';
@@ -36,7 +36,7 @@ function* handleFetch() {
 // This is our watcher function. We use `take*()` functions to watch Redux for a specific action
 // type, and run our saga, for example the `handleFetch()` saga above.
 function* watchFetchRequest() {
-  yield takeEvery(AgencyActions.FETCH, handleFetch);
+    yield takeEvery(PersonActions.FETCH_PERSON, handleFetch);
 }
 
 // Export our root saga.

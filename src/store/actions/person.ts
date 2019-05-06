@@ -1,8 +1,9 @@
 import { action } from 'typesafe-actions';
-import { AgencyActions } from './types';
+import { PersonActions } from './types';
 
-export const fetchPerson = () => action(AgencyActions.FETCH);
+export const fetchPerson = () => 
+  action(PersonActions.FETCH_PERSON);
 export const fetchPersonSuccess = (data: any) =>
-  action(AgencyActions.FETCH_SUCCESS, data);
+  action(PersonActions.FETCH_SUCCESS, data);
 export const fetchPersonError = (error: string) =>
-  action(AgencyActions.FETCH_ERROR, error);
+  action(PersonActions.FETCH_ERROR, error);
