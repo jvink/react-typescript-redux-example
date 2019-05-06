@@ -1,3 +1,8 @@
-export const FETCH_AGENCY = 'FETCH_AGENCY';
-export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-export const FETCH_ERROR = 'FETCH_ERROR';
+import { createActionsWithPrefix } from '../../utils/action';
+
+export const AgencyActions = createActionsWithPrefix('AGENCY/', {
+  FETCH: 'FETCH',
+  FETCH_SUCCESS: 'FETCH_SUCCESS',
+  FETCH_ERROR: 'FETCH_ERROR',
+  TEST: 'test',
+});
