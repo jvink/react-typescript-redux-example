@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPerson } from './store/actions/person';
 import { Dispatch } from 'redux';
 import { ApplicationState } from './store';
 import { isArrayNotEmpty } from './utils/array';
+import { useMount } from './utils/hooks';
 
 const App: React.FC<ReduxType> = (props: ReduxType) => {
   const { fetchPerson, person } = props;
   const { isLoading, error, persons } = person;
-  useEffect(() => {
+
+  useMount(() => {
     fetchPerson();
-  }, [fetchPerson]);
+  });
 
   return (
     <div className="container">
