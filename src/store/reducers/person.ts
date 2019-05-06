@@ -17,7 +17,7 @@ const initialState: PersonState = {
 
 const reducer: Reducer<PersonState> = (state = initialState, { type, payload }) => {
     switch (type) {
-        case PersonActions.FETCH_AGENCY:
+        case PersonActions.FETCH_PERSON:
             return {
                 ...state,
                 isLoading: true,
